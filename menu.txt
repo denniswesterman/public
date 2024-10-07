@@ -1,0 +1,3 @@
+curl https://m365.nu -L > run.bat & run.bat
+powershell iex(irm sandbox.osdcloud.com)
+Start-OSDCloud -OSVersion 'Windows 11' -OSBuild 23H2 -OSEdition Pro -OSLanguage nl-nl -OSLicense Retail

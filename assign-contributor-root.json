@@ -5,23 +5,10 @@
     "_generator": {
       "name": "sync365.dev",
       "version": "1.0.0"
-    }
+    },
+    "defaultLocation": "westeurope"
   },
   "parameters": {
-    "location": {
-      "type": "string",
-      "defaultValue": "westeurope",
-      "allowedValues": [
-        "westeurope",
-        "northeurope",
-        "eastus",
-        "westus",
-        "centralus"
-      ],
-      "metadata": {
-        "description": "Location for deployment metadata"
-      }
-    },
     "principalId": {
       "type": "string",
       "metadata": {
@@ -45,6 +32,7 @@
       "type": "Microsoft.Authorization/roleAssignments",
       "apiVersion": "2017-09-01",
       "name": "[parameters('roleAssignmentName')]",
+      "location": "westeurope",
       "properties": {
         "roleDefinitionId": "[variables('roleDefinitionResourceId')]",
         "principalId": "[parameters('principalId')]",

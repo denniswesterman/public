@@ -12,14 +12,14 @@
     "principalId": {
       "type": "string",
       "metadata": {
-        "description": "ObjectId van de service principal (Enterprise application) van jullie app in deze tenant."
+        "description": "ObjectId of the service principal (Enterprise application) of your app in this tenant."
       }
     },
     "location": {
       "type": "string",
-      "defaultValue": "[resourceGroup().location]",
+      "defaultValue": "westeurope",
       "metadata": {
-        "description": "Location for all resources."
+        "description": "Location for the deployment metadata. Please select West Europe."
       }
     },
     "roleAssignmentName": {
@@ -39,7 +39,6 @@
       "type": "Microsoft.Authorization/roleAssignments",
       "apiVersion": "2017-09-01",
       "name": "[parameters('roleAssignmentName')]",
-      "location": "westeurope",
       "properties": {
         "roleDefinitionId": "[variables('roleDefinitionResourceId')]",
         "principalId": "[parameters('principalId')]",

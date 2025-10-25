@@ -17,9 +17,9 @@
     },
     "location": {
       "type": "string",
-      "defaultValue": "westeurope",
+      "defaultValue": "[deployment().location]",
       "metadata": {
-        "description": "Location for the deployment metadata. Please select West Europe."
+        "description": "Location for the deployment metadata."
       }
     },
     "roleAssignmentName": {

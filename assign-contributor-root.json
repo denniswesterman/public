@@ -8,13 +8,6 @@
         "description": "ObjectId van de service principal (Enterprise application) van jullie app in deze tenant."
       }
     },
-    "location": {
-      "type": "string",
-      "defaultValue": "westeurope",
-      "metadata": {
-        "description": "Location for the deployment metadata"
-      }
-    },
     "roleAssignmentName": {
       "type": "string",
       "defaultValue": "[guid(managementGroup().id, parameters('principalId'), 'b24988ac-6180-42a0-ab88-20f7382dd24c')]",

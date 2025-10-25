@@ -1,0 +1,28 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-08-01/managementGroupDeploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "principalId": {
+      "type": "string",
+      "metadata": {
+        "description": "ObjectId van de service principal (Enterprise application) van jullie app in deze tenant."
+      }
+    }
+  },
+  "variables": {
+    "contributorRoleGuid": "b24988ac-6180-42a0-ab88-20f7382dd24c",
+    "roleDefinitionResourceId": "[managementGroupResourceId('Microsoft.Authorization/roleDefinitions', variables('contributorRoleGuid'))]"
+  },
+  "resources": [
+    {
+      "type": "Microsoft.Authorization/roleAssignments",
+      "apiVersion": "2017-09-01",
+      "name": "[newGuid()]",
+      "properties": {
+        "roleDefinitionId": "[variables('roleDefinitionResourceId')]",
+        "principalId": "[parameters('principalId')]",
+        "principalType": "ServicePrincipal"
+      }
+    }
+  ]
+}
